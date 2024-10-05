@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Weak Handed Lay",
+        "time": 10,
+        "description": "Develop your weak side layups",
+        "type": "Layup"
+    },
+    {
+        "id": 2,
+        "name": "Scoop Lay",
+        "time": 10,
+        "description": "Defend the ball with your body",
+        "type": "Layup"
+    },
+    {
+        "id": 3,
+        "name": "1-Dribble Lay",
+        "time": 15,
+        "description": "Use your bodyweight to get into position",
+        "type": "Layup"
+    },
+    {
+        "id": 4,
+        "name": "Close-range Floater",
+        "time": 15,
+        "description": "Practice finishing over defenders",
+        "type": "Floater"
+    },
+    {
+        "id": 5,
+        "name": "Backboard Floater",
+        "time": 9,
+        "description": "Develop the soft touch needed for a floater.",
+        "type": "Floater"
+    },
+    {
+        "id": 6,
+        "name": "High Arc Floater",
+        "time": 13,
+        "description": "Improve your ability to score in the paint.",
+        "type": "Floater"
+    },
+    {
+        "id": 7,
+        "name": "Elbow Jump Shot",
+        "time": 10,
+        "description": "Spin and catch the ball before shooting a floater",
+        "type": "Elbow"
+    },
+    {
+        "id": 8,
+        "name": "Elbow Fadeaway",
+        "time": 7,
+        "description": "Fadeaway while shooting from the elbow",
+        "type": "Elbow"
+    },
+    {
+        "id": 9,
+        "name": "Elbow Drive Pull-up",
+        "time": 11,
+        "description": "Drive from the elbow and pull up for a closer shot.",
+        "type": "Elbow"
+    },
+    {
+        "id": 10,
+        "name": "Midrange Off the Dribble",
+        "time": 12,
+        "description": "Hit midrange shots off the dribble at game speed",
+        "type": "Midrange"
+    },
+    {
+        "id": 11,
+        "name": "Catch and Shoot Midrange",
+        "time": 14,
+        "description": "Spin the ball up before catching and ripping",
+        "type": "Midrange"
+    },
+    {
+        "id": 12,
+        "name": "Midrange Pull-up",
+        "time": 8,
+        "description": "Pull-up from your best midrange spot",
+        "type": "Midrange"
+    },
+    {
+        "id": 13,
+        "name": "Corner-3",
+        "time": 20,
+        "description": "Hit a 3-pointer from the closest corner",
+        "type": "Jumper"
+    },
+    {
+        "id": 14,
+        "name": "Spin and catch 3-pointer",
+        "time": 18,
+        "description": "Spin the ball up, catch it, dip and shoot",
+        "type": "Jumper"
+    },
+    {
+        "id": 15,
+        "name": "Quick Release Jumper",
+        "time": 16,
+        "description": "Touch the ball down, then go as fast as you can",
+        "type": "Jumper"
+    }
+]

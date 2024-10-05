@@ -11,6 +11,10 @@
 		14C242D82CAEA1DA00C1A37C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C242D72CAEA1DA00C1A37C /* ContentView.swift */; };
 		14C242DA2CAEA1DC00C1A37C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C242D92CAEA1DC00C1A37C /* Assets.xcassets */; };
 		14C242DD2CAEA1DC00C1A37C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C242DC2CAEA1DC00C1A37C /* Preview Assets.xcassets */; };
+		14C242E42CAEA28500C1A37C /* Drill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C242E32CAEA28500C1A37C /* Drill.swift */; };
+		14C242EA2CAEA5AE00C1A37C /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C242E92CAEA5AE00C1A37C /* WorkoutListView.swift */; };
+		14C242EF2CAFEBBF00C1A37C /* DrillsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 14C242EE2CAFEBBF00C1A37C /* DrillsData.json */; };
+		14DD9AE12CAFFE45002EF91E /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DD9AE02CAFFE45002EF91E /* WorkoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		14C242D72CAEA1DA00C1A37C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14C242D92CAEA1DC00C1A37C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14C242DC2CAEA1DC00C1A37C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		14C242E32CAEA28500C1A37C /* Drill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drill.swift; sourceTree = "<group>"; };
+		14C242E92CAEA5AE00C1A37C /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
+		14C242EE2CAFEBBF00C1A37C /* DrillsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DrillsData.json; sourceTree = "<group>"; };
+		14DD9AE02CAFFE45002EF91E /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,12 @@
 		14C242D42CAEA1DA00C1A37C /* hooper-v2 */ = {
 			isa = PBXGroup;
 			children = (
-				14C242D52CAEA1DA00C1A37C /* hooper_v2App.swift */,
-				14C242D72CAEA1DA00C1A37C /* ContentView.swift */,
+				14C242ED2CAFEB7400C1A37C /* Resources */,
 				14C242D92CAEA1DC00C1A37C /* Assets.xcassets */,
 				14C242DB2CAEA1DC00C1A37C /* Preview Content */,
+				14C242E62CAEA2AB00C1A37C /* Views */,
+				14C242E52CAEA29300C1A37C /* Models */,
+				14C242D52CAEA1DA00C1A37C /* hooper_v2App.swift */,
 			);
 			path = "hooper-v2";
 			sourceTree = "<group>";
@@ -65,6 +75,32 @@
 				14C242DC2CAEA1DC00C1A37C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		14C242E52CAEA29300C1A37C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14C242E32CAEA28500C1A37C /* Drill.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		14C242E62CAEA2AB00C1A37C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14C242D72CAEA1DA00C1A37C /* ContentView.swift */,
+				14C242E92CAEA5AE00C1A37C /* WorkoutListView.swift */,
+				14DD9AE02CAFFE45002EF91E /* WorkoutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		14C242ED2CAFEB7400C1A37C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14C242EE2CAFEBBF00C1A37C /* DrillsData.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +163,7 @@
 			files = (
 				14C242DD2CAEA1DC00C1A37C /* Preview Assets.xcassets in Resources */,
 				14C242DA2CAEA1DC00C1A37C /* Assets.xcassets in Resources */,
+				14C242EF2CAFEBBF00C1A37C /* DrillsData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14DD9AE12CAFFE45002EF91E /* WorkoutView.swift in Sources */,
 				14C242D82CAEA1DA00C1A37C /* ContentView.swift in Sources */,
+				14C242E42CAEA28500C1A37C /* Drill.swift in Sources */,
 				14C242D62CAEA1DA00C1A37C /* hooper_v2App.swift in Sources */,
+				14C242EA2CAEA5AE00C1A37C /* WorkoutListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
