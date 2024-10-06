@@ -16,32 +16,38 @@ struct WorkoutView: View {
         counter += 1
     }
     
-    
     var body: some View {
-        VStack {
-            
-            if (randomDrill != nil && randomDrill?.name != nil) {
-                Text(randomDrill?.name ?? "default")
-            }
-            
-            VStack {
-                Text("Here's the count: \(counter)")
-                    .padding()
-                Button(action: startWorkout) {
-                    HStack {
-                        Text("Start Workout")
-                        Image(systemName: "play.circle")
+        NavigationStack {
+            List {
+                ForEach(categories.keys.sorted(), id: \.self) { key in
+                    Section {
+                        VStack {
+                            Button(action: startWorkout) {
+                                HStack {
+                                    Text("\(key) Workout")
+                                    Spacer()
+                                    Image(systemName: "play.circle")
+                                        .font(.headline)
+                                }
+                            }
+                        }
+                        .padding()
+                        .frame(
+                            maxWidth: .infinity
+                        )
                     }
+                    .padding()
+                    .listRowSeparator(.hidden)
+                    .cornerRadius(8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(.gray, lineWidth: 1)
+                            .blur(radius: 3))
                 }
             }
-            
-        }
-        .navigationTitle("Start Workout")
-        .toolbar {
-            Button {
-            } label: {
-                Label("Plus", systemImage: "plus.circle")
-            }
+            .listStyle(.plain)
+            .padding(.vertical, 10)
+            .navigationTitle("Start Workout")
         }
     }
 }

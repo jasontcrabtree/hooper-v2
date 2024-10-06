@@ -19,17 +19,17 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView(selection: $selection) {
-                    WorkoutView()
+                WorkoutView()
                     .tabItem {
                         Label("Start Workout", systemImage: "play")
                     }
                     .tag(Tab.session)
                 
-//                WorkoutListView()
-//                    .tabItem {
-//                        Label("Workouts", systemImage: "sportscourt")
-//                    }
-//                    .tag(Tab.workoutList)
+                //                WorkoutListView()
+                //                    .tabItem {
+                //                        Label("Workouts", systemImage: "sportscourt")
+                //                    }
+                //                    .tag(Tab.workoutList)
                 
                 CategoriesListView()
                     .tabItem {
@@ -39,7 +39,6 @@ struct ContentView: View {
             }
         }
         .preferredColorScheme(.dark)
-        
     }
 }
 
