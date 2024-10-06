@@ -7,12 +7,13 @@
 
 import Foundation
 
+// MODEL
 struct Drill: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var time: Int
     var description: String
-    var type: Category
+    var category: Category
     
     enum Category: String, CaseIterable, Codable {
         case layup = "Layup"
@@ -23,8 +24,17 @@ struct Drill: Hashable, Codable, Identifiable {
     }
 }
 
+// DATA
 var drills: [Drill] = load("DrillsData.json")
 
+var categories: [String: [Drill]] {
+    Dictionary(
+        grouping: drills,
+        by: { $0.category.rawValue }
+    )
+}
+
+// DATA METHODS
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     

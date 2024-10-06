@@ -13,6 +13,7 @@ struct ContentView: View {
     enum Tab {
         case workoutList
         case session
+        case categoriesList
     }
     
     var body: some View {
@@ -28,6 +29,12 @@ struct ContentView: View {
                     Label("Workouts", systemImage: "sportscourt")
                 }
                 .tag(Tab.workoutList)
+            
+            CategoriesListView()
+                .tabItem {
+                    Label("Categories", systemImage: "list.bullet")
+                }
+                .tag(Tab.categoriesList)
         }
         .preferredColorScheme(.dark)
     }

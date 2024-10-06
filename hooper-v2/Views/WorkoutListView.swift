@@ -9,32 +9,34 @@ import SwiftUI
 
 struct WorkoutListView: View {
     var body: some View {
-        NavigationSplitView {
-            List(drills) { drill in 
+        NavigationStack {
+            List(drills, id: \.self) { drill in
+                
+                
+                
+//                ForEach(drillGroups.keys.sorted(),
+//                        id: \.self) {key in
+//                    Text(key.description)
+//                }
+                
                 NavigationLink {
                     VStack {
                         Text(drill.description)
                     }
-                        .navigationTitle(drill.name)
+                    .navigationTitle(drill.name)
                 } label: {
                     HStack {
                         Text(drill.name)
+                        Spacer()
+                        Text(drill.category.rawValue)
+                            .textCase(.uppercase)
+                            .dynamicTypeSize(.small)
+                            .fontWeight(.bold)
                     }
-                        .padding()
+                    .padding()
                 }
             }
             .navigationTitle("Workout Drills")
-//            .toolbar {
-//                Button {
-//                } label: {
-//                    HStack {
-//                        Label("Plus", systemImage: "plus.circle")
-//                    }
-//
-//                }
-//            }
-        } detail: {
-            Text("Select a drill")
         }
     }
 }

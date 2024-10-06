@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct WorkoutView: View {
+    
+    var randomDrill = drills.randomElement();
+    @State private var counter = 0
+    
     var body: some View {
         VStack {
-            Text("Starting Workout") 
+            
+            if (randomDrill != nil && randomDrill?.name != nil) {
+                Text(randomDrill?.name ?? "default")
+            }
+            
+            VStack {
+              Text("Here's the count: \(counter)")
+                .padding()
+              Button("Increase Counter") {
+                counter += 1
+              }
+            }
+            
         }
         .navigationTitle("Start Workout")
         .toolbar {
