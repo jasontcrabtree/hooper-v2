@@ -12,6 +12,11 @@ struct WorkoutView: View {
     var randomDrill = drills.randomElement();
     @State private var counter = 0
     
+    func startWorkout() {
+        counter += 1
+    }
+    
+    
     var body: some View {
         VStack {
             
@@ -20,11 +25,14 @@ struct WorkoutView: View {
             }
             
             VStack {
-              Text("Here's the count: \(counter)")
-                .padding()
-              Button("Increase Counter") {
-                counter += 1
-              }
+                Text("Here's the count: \(counter)")
+                    .padding()
+                Button(action: startWorkout) {
+                    HStack {
+                        Text("Start Workout")
+                        Image(systemName: "play.circle")
+                    }
+                }
             }
             
         }

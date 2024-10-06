@@ -17,26 +17,29 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TabView(selection: $selection) {
-                WorkoutView()
-                .tabItem {
-                    Label("Start Workout", systemImage: "play")
-                }
-                .tag(Tab.session)
-            
-            WorkoutListView()
-                .tabItem {
-                    Label("Workouts", systemImage: "sportscourt")
-                }
-                .tag(Tab.workoutList)
-            
-            CategoriesListView()
-                .tabItem {
-                    Label("Categories", systemImage: "list.bullet")
-                }
-                .tag(Tab.categoriesList)
+        VStack {
+            TabView(selection: $selection) {
+                    WorkoutView()
+                    .tabItem {
+                        Label("Start Workout", systemImage: "play")
+                    }
+                    .tag(Tab.session)
+                
+//                WorkoutListView()
+//                    .tabItem {
+//                        Label("Workouts", systemImage: "sportscourt")
+//                    }
+//                    .tag(Tab.workoutList)
+                
+                CategoriesListView()
+                    .tabItem {
+                        Label("Workouts", systemImage: "list.bullet")
+                    }
+                    .tag(Tab.categoriesList)
+            }
         }
         .preferredColorScheme(.dark)
+        
     }
 }
 

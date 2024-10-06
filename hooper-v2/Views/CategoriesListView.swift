@@ -15,7 +15,13 @@ struct CategoryGroup: View {
         
         Section(header: Text(label)) {
             ForEach(items) { drill in
-                Text(drill.name)
+                NavigationLink {
+                    DrillView(
+                        item: drill
+                    )
+                } label: {
+                    Text(drill.name)
+                }
             }
         }
     }
@@ -24,7 +30,7 @@ struct CategoryGroup: View {
 struct CategoriesListView: View {
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(alignment: .leading) {
                 List {
                     ForEach(categories.keys.sorted(), id: \.self) { key in
                         CategoryGroup(
